@@ -33,10 +33,9 @@ app.get('/',(request, response) => {
     files.forEach((file) => {
         console.log(file);
 
-        response.writeHead(200,{'Content-Type' : 'text/plain'});
-        response.end(JSON.stringify(file)); 
+         
     })
-    
+    response.send(files)
 })
 })
 
